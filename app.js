@@ -8,15 +8,13 @@ if(navigator.geolocation){
 navigator.geolocation.getCurrentPosition(position =>{
     lon = position.coords.longitude;
     lat = position.coords.latitude;
-    const proxy = 'https://cors-anywhere.herokuapp.com/';
-    const api =`${proxy}api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={71deb6238a229a43a4ac9c6c78859f55}`;
-
+//to do...
     fetch(api)
 .then(response=>{
 return response.json();
 })
 .then(data =>{
-    console.log(data);
+    //console.log(data);
     const {temperature, summary, icon} = data.currently;
     //set DOM elements from Api
     temperatureDegree.textContent=temperature;
