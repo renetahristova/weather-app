@@ -4,7 +4,6 @@ window.addEventListener("load", () => {
   let descriptionElement = document.querySelector(".temperature-description");
   let degreeElement = document.querySelector(".temperature-degree");
   let timezoneElement = document.querySelector(".location-timezone");
-  let imageElement = document.querySelector(".icon");
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -20,10 +19,13 @@ window.addEventListener("load", () => {
         })
         .then((data) => {
           console.log(data);
+          //   let icons = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
           timezoneElement.textContent = data.name;
           degreeElement.textContent = data.main.temp;
           descriptionElement.textContent = data.weather[0].description;
-          imageElement.textContent = data.weather[0].icon;
+          //   let imgElement = document.createElement("img");
+          //   imgElement.scr = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+          //   timezoneElement.appendChild(imgElement);
         })
         .catch(console.err);
     });
