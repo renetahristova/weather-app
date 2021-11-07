@@ -47,3 +47,20 @@ body {
 .temperature-description {
   font-size: 1rem;
 }
+.details {
+  margin: 1rem;
+  display: inline-block;
+  background-color: rgb(48, 62, 143);
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.details:hover {
+  background-color: rgb(47, 150, 163);
+}
